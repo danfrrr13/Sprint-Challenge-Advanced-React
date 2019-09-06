@@ -11,7 +11,7 @@ const PlayerList = props => {
 
     return (
         <div className='playerList'>
-            {data.map(player => <Player player={player}>{player.name}</Player>)}
+            {props.data ? props.data.map(player => <Player player={player}>{player.name}</Player>) : null}
         </div>
     )
 }

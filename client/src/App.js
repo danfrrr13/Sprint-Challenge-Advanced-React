@@ -15,7 +15,6 @@ class App extends Component {
   componentDidMount() {
     axios.get(this.state.url)
         .then(res => {
-            console.log('res.data: ', res.data);
             this.setState({ mainData: res.data });
         })
         .catch(err => console.log('Error: ', err));
@@ -30,7 +29,8 @@ class App extends Component {
         <h5>
           ranked by search interest from Google Trends
         </h5>
-        <PlayerList data={this.state.mainData} />
+        {this.state.mainData ? <PlayerList data={this.state.mainData} /> : null}
+        
       </div>
     );
   }
