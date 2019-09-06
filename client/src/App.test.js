@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('App renders without crashing', () => {
+  render(<App />);
+});
+
+test('Containes all neccesary text', () => {
+  const container = render(<App />);
+  
+  container.getByText(/women/i);
+  container.getByText(/world/i);
+  container.getByText(/cup/i);
+  container.getByText(/players/i);
+  container.getByText(/ranked/i);
+  container.getByText(/search/i);
+  container.getByText(/google/i);
+
 });
