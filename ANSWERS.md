@@ -16,4 +16,4 @@
 
 - [ ] Why is it important to test our apps?
 
-    A:  To lower the chances of producing buggy code. It is a cheaper alternative to paying multiple programmers to debug a faulty               application.
+        A:  To lower the chances of producing buggy code. It is a cheaper alternative to paying multiple programmers to debug a faulty application.
